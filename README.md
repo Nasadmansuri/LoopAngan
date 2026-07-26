@@ -1,16 +1,48 @@
-# React + Vite
+# LoopAngan
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**Learn. Build. Repeat.**
 
-Currently, two official plugins are available:
+> **⚠️ Proprietary — All Rights Reserved.** This code is publicly visible for portfolio purposes only. It is not open source and may not be copied, reused, or redistributed. See [LICENSE](./LICENSE).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+LoopAngan is an education platform offering project-based coding courses, built as a React web app. Our first live cohort is the **Python Zero to Hero Bootcamp 2083** — a beginner-friendly bootcamp taking students from absolute zero to real, deployable projects.
 
-## React Compiler
+"Angan" means courtyard in Nepali — a shared space where people gather to learn from each other. That's the idea behind LoopAngan: small cohorts, live feedback, and project-first learning instead of passive video lectures.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Links
 
-## Expanding the Oxlint configuration
+- 🔗 **Enroll now:** https://forms.gle/ooT7uMC8JiG9Qih69
+- 📸 **Instagram:** [@loopangan](https://www.instagram.com/loopangan)
+- 📧 **Email:** loopangan.work@gmail.com
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Pages
+
+- **Home** — hero, about snippet, course preview, CTA
+- **About** — about LoopAngan
+- **Courses** — Python Zero to Hero Bootcamp 2083 (open now) + upcoming courses
+- **Contact** — contact form (enrollment happens via [Google Form](https://forms.gle/ooT7uMC8JiG9Qih69))
+
+## Tech Stack
+
+- React (Vite)
+- React Router
+- Tailwind CSS
+- Custom CSS 3D hover effect on course cards
+
+## Getting Started
+
+```bash
+git clone https://github.com/Nasadmansuri/LoopAngan.git
+cd LoopAngan
+npm install
+npm run dev
+```
+
+Visit `http://localhost:5173`.
+
+## License
+
+All Rights Reserved. See [LICENSE](./LICENSE).
+
+## Author
+
+Built by [Nasad Mansuri](https://github.com/Nasadmansuri) in Biratnagar, Nepal.
