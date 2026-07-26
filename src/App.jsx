@@ -28,7 +28,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/verify-credential" element={<VerifyCredential />} />
+        <Route path="/verify" element={<VerifyCredential />} />
       </Routes>
       <Footer />
     </BrowserRouter>

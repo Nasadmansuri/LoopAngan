@@ -29,6 +29,7 @@ function Footer() {
               <li><Link to="/" className="text-sm text-[#5B6178] hover:text-[#10142B] transition-colors">Home</Link></li>
               <li><Link to="/about" className="text-sm text-[#5B6178] hover:text-[#10142B] transition-colors">About</Link></li>
               <li><Link to="/courses" className="text-sm text-[#5B6178] hover:text-[#10142B] transition-colors">Courses</Link></li>
+              <li><Link to="/verify" className="text-sm text-[#5B6178] hover:text-[#10142B] transition-colors">Verify Certificate</Link></li>
               <li><Link to="/contact" className="text-sm text-[#5B6178] hover:text-[#10142B] transition-colors">Contact</Link></li>
             </ul>
           </div>
