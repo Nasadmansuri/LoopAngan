@@ -37,7 +37,7 @@ function Footer() {
           {/* Contact + social */}
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-wide text-[#10142B] mb-4">Get in touch</h3>
-            <p className="text-sm text-[#5B6178] font-mono mb-2">loopangan.work@gmail.com</p>
+            <p className="text-sm text-[#5B6178] font-mono mb-2">loopangan.team@gmail.com</p>
             <p className="text-sm text-[#5B6178] font-mono mb-4">+977 9817824219</p>
             <div className="flex gap-4">
               <a href="https://www.instagram.com/loopangan" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5B6178] hover:text-[#F97316] transition-colors">Instagram</a>

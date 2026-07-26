@@ -22,7 +22,7 @@ function Navbar() {
           <li><Link to="/" className="text-sm font-medium text-[#5B6178] hover:text-[#10142B]">Home</Link></li>
           <li><Link to="/about" className="text-sm font-medium text-[#5B6178] hover:text-[#10142B]">About</Link></li>
           <li><Link to="/courses" className="text-sm font-medium text-[#5B6178] hover:text-[#10142B]">Courses</Link></li>
-          <li><Link to="/verify-credential" className="text-sm font-medium text-[#5B6178] hover:text-[#10142B]">Verify Certificate</Link></li>
+          <li><Link to="/verify" className="text-sm font-medium text-[#5B6178] hover:text-[#10142B]">Verify Certificate</Link></li>
           <li><Link to="/contact" className="text-sm font-medium text-[#5B6178] hover:text-[#10142B]">Contact</Link></li>
         </ul>
 

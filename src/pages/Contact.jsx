@@ -55,9 +55,9 @@ function Contact() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-          <a href={`mailto:loopangan.work@gmail.com`} className="rounded-2xl border border-[#E7EAF3] bg-white p-5 hover:border-[#3B4FE0] transition-colors">
+          <a href={`mailto:loopangan.team@gmail.com`} className="rounded-2xl border border-[#E7EAF3] bg-white p-5 hover:border-[#3B4FE0] transition-colors">
             <p className="text-xs font-mono uppercase tracking-[0.18em] text-[#3B4FE0] mb-2">Email</p>
-            <p className="text-sm text-[#5B6178] font-mono">loopangan.work@gmail.com</p>
+            <p className="text-sm text-[#5B6178] font-mono">loopangan.team@gmail.com</p>
           </a>
           <a href={`tel:${phoneNumber.replace(/\s+/g, '')}`} className="rounded-2xl border border-[#E7EAF3] bg-white p-5 hover:border-[#3B4FE0] transition-colors">
             <p className="text-xs font-mono uppercase tracking-[0.18em] text-[#3B4FE0] mb-2">Phone</p>
