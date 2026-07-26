@@ -4,5 +4,17 @@
     "studentName": "Nasad Mansuri",
     "course": "Python Zero to Hero Bootcamp 2083",
     "issueDate": "1 August 2026"
+  },
+  {
+    "certificateId": "LA-PY-2083-000002",
+    "studentName": "Mohammad Zaid",
+    "course": "Python Zero to Hero Bootcamp 2083",
+    "issueDate": "1 August 2026"
+  },
+  {
+    "certificateId": "LA-PY-2083-000003",
+    "studentName": "Saugat Rauniyar",
+    "course": "Python Zero to Hero Bootcamp 2083",
+    "issueDate": "1 August 2026"
   }
 ]
