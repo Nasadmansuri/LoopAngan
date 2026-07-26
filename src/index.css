@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #10142B;
+  background: #ffffff;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.03em;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+::selection {
+  background: rgba(59, 79, 224, 0.14);
+  color: #10142B;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.hover-3d {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  perspective: 1200px;
+}
+
+.hover-3d .card-3d {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  transition: transform 0.35s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.hover-3d:hover .card-3d {
+  transform: translateY(-8px) rotateX(5deg) rotateY(-5deg) scale3d(1.01, 1.01, 1.01);
+}
+
+.hover-3d > div:not(.card-3d) {
+  z-index: 2;
+}
+
+.hover-3d:has(> div:nth-child(2):hover) .card-3d { transform: rotateX(10deg) rotateY(-10deg) scale3d(1.03,1.03,1.03); }
+.hover-3d:has(> div:nth-child(3):hover) .card-3d { transform: rotateX(10deg) rotateY(0deg) scale3d(1.03,1.03,1.03); }
+.hover-3d:has(> div:nth-child(4):hover) .card-3d { transform: rotateX(10deg) rotateY(10deg) scale3d(1.03,1.03,1.03); }
+.hover-3d:has(> div:nth-child(5):hover) .card-3d { transform: rotateX(0deg) rotateY(10deg) scale3d(1.03,1.03,1.03); }
+.hover-3d:has(> div:nth-child(6):hover) .card-3d { transform: rotateX(-10deg) rotateY(10deg) scale3d(1.03,1.03,1.03); }
+.hover-3d:has(> div:nth-child(7):hover) .card-3d { transform: rotateX(-10deg) rotateY(0deg) scale3d(1.03,1.03,1.03); }
+.hover-3d:has(> div:nth-child(8):hover) .card-3d { transform: rotateX(-10deg) rotateY(-10deg) scale3d(1.03,1.03,1.03); }
+.hover-3d:has(> div:nth-child(9):hover) .card-3d { transform: rotateX(0deg) rotateY(-10deg) scale3d(1.03,1.03,1.03); }
