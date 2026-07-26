@@ -22,6 +22,7 @@ function Navbar() {
           <li><Link to="/" className="text-sm font-medium text-[#5B6178] hover:text-[#10142B]">Home</Link></li>
           <li><Link to="/about" className="text-sm font-medium text-[#5B6178] hover:text-[#10142B]">About</Link></li>
           <li><Link to="/courses" className="text-sm font-medium text-[#5B6178] hover:text-[#10142B]">Courses</Link></li>
+          <li><Link to="/verify-credential" className="text-sm font-medium text-[#5B6178] hover:text-[#10142B]">Verify Certificate</Link></li>
           <li><Link to="/contact" className="text-sm font-medium text-[#5B6178] hover:text-[#10142B]">Contact</Link></li>
         </ul>
 
@@ -48,6 +49,7 @@ function Navbar() {
           <li><Link to="/" onClick={() => setMenuOpen(false)} className="block py-2.5 text-[#5B6178] hover:text-[#10142B]">Home</Link></li>
           <li><Link to="/about" onClick={() => setMenuOpen(false)} className="block py-2.5 text-[#5B6178] hover:text-[#10142B]">About</Link></li>
           <li><Link to="/courses" onClick={() => setMenuOpen(false)} className="block py-2.5 text-[#5B6178] hover:text-[#10142B]">Courses</Link></li>
+          <li><Link to="/verify" className="text-sm font-medium text-[#5B6178] hover:text-[#10142B]">Verify Certificate</Link></li>
           <li><Link to="/contact" onClick={() => setMenuOpen(false)} className="block py-2.5 text-[#5B6178] hover:text-[#10142B]">Contact</Link></li>
           <li className="pt-2">
             <Link to="/contact" onClick={() => setMenuOpen(false)} className="inline-flex items-center justify-center font-semibold text-sm px-5 py-3 rounded-full border border-[#D8DEF0] text-[#10142B]">

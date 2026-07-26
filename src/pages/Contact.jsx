@@ -1,19 +1,40 @@
 import { useState } from 'react'
 
+// Replace with your actual Formspree form ID (from formspree.io)
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mnjeokdk'
+
 function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', course: '', message: '' })
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState('idle') // idle | submitting | success | error
   const phoneNumber = '+977 9817824219'
 
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
-    // Wire this up to a real backend
-    setSubmitted(true)
-    setForm({ name: '', email: '', phone: '', course: '', message: '' })
+    setStatus('submitting')
+
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(form),
+      })
+
+      if (res.ok) {
+        setStatus('success')
+        setForm({ name: '', email: '', phone: '', course: '', message: '' })
+      } else {
+        setStatus('error')
+      }
+    } catch (err) {
+      setStatus('error')
+    }
   }
 
   return (
@@ -51,10 +72,16 @@ function Contact() {
       </div>
 
       <div className="lg:pt-4">
-        {submitted ? (
+        {status === 'success' ? (
           <div className="bg-[#F8FAFF] border border-[#E7EAF3] rounded-3xl p-8 text-center shadow-[0_12px_32px_rgba(16,20,43,0.05)]">
             <h3 className="text-xl font-semibold text-[#10142B] mb-2">Message sent</h3>
             <p className="text-[#5B6178]">We'll get back to you soon.</p>
+            <button
+              onClick={() => setStatus('idle')}
+              className="mt-4 text-sm font-semibold text-[#3B4FE0] hover:underline"
+            >
+              Send another message
+            </button>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col gap-4 rounded-3xl border border-[#E7EAF3] bg-white p-6 md:p-8 shadow-[0_12px_32px_rgba(16,20,43,0.05)]">
@@ -117,11 +144,19 @@ function Contact() {
                 className="w-full border border-[#E1E5F5] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#3B4FE0]"
               />
             </div>
+
+            {status === 'error' && (
+              <p className="text-sm text-red-600">
+                Something went wrong sending your message. Please try again, or email us directly.
+              </p>
+            )}
+
             <button
               type="submit"
-              className="inline-flex items-center justify-center font-semibold text-sm px-6 py-3 rounded-full bg-[#3B4FE0] text-white hover:bg-[#232F9E] transition-colors"
+              disabled={status === 'submitting'}
+              className="inline-flex items-center justify-center font-semibold text-sm px-6 py-3 rounded-full bg-[#3B4FE0] text-white hover:bg-[#232F9E] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Send Message
+              {status === 'submitting' ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         )}
